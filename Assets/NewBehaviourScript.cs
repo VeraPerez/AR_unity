@@ -22,7 +22,7 @@ public class NewBehaviourScript : MonoBehaviour
     void interacciones()
     {
         //Obtiene el número de la escena donde se obtiene el código
-        int numeroescena = gameObject.scene.rootCount;
+        int numeroescena = gameObject.scene.buildIndex;
         SceneManager.LoadScene(numeroescena + 1);
     }
         private void OnCollisionEnter(Collision collision)

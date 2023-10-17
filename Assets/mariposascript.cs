@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class mariposascript : MonoBehaviour
 {
@@ -15,4 +16,17 @@ public class mariposascript : MonoBehaviour
     {
         
     }
+    void interacciones()
+    {
+        //Obtiene el número de la escena donde se obtiene el código
+        int numeroescena = gameObject.scene.buildIndex;
+        SceneManager.LoadScene(numeroescena + 1);
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        interacciones();
+
+    }
 }
+
+
